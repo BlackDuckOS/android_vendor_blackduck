@@ -1,0 +1,71 @@
+soong_namespace {
+}
+
+android_app_import {
+	name: "Updater",
+	owner: "blackduck",
+	apk: "proprietary/system_ext/app/Updater/Updater.apk",
+	certificate: "platform",
+	dex_preopt: { enabled: false },
+	privileged: false,
+	system_ext_specific: true,
+}
+
+android_app_import {
+	name: "Cabinet",
+	owner: "blackduck",
+	apk: "proprietary/system_ext/app/Cabinet/Cabinet.apk",
+	preprocessed: true,
+	dex_preopt: { enabled: false },
+	privileged: false,
+	system_ext_specific: true,
+}
+
+android_app_import {
+	name: "Secure",
+	owner: "blackduck",
+	apk: "proprietary/system_ext/app/Secure/Secure.apk",
+	certificate: "platform",
+	dex_preopt: { enabled: false },
+	privileged: false,
+	system_ext_specific: true,
+}
+
+
+android_app_import {
+	name: "Wizard",
+	owner: "blackduck",
+	apk: "proprietary/system_ext/priv-app/Wizard/Wizard.apk",
+	certificate: "platform",
+	dex_preopt: { enabled: false },
+	privileged: true,
+	system_ext_specific: true,
+
+	required: [ "privapp_whitelist_com.blackduck.wizard.xml"],
+}
+
+android_app_import {
+	name: "SystemUpdaterBD", // prevent naming conflict with Car/SystemUpdater
+	owner: "blackduck",
+	apk: "proprietary/system_ext/priv-app/SystemUpdater/SystemUpdater.apk",
+	certificate: "platform",
+	dex_preopt: { enabled: false },
+	privileged: true,
+	system_ext_specific: true,
+
+    required: [ "privapp_whitelist_com.blackduck.systemupdater.xml"],
+}
+
+prebuilt_etc_xml {
+    name: "privapp_whitelist_com.blackduck.systemupdater.xml",
+    src: "proprietary/system_ext/etc/permissions/privapp_whitelist_com.blackduck.systemupdater.xml",
+    system_ext_specific: true,
+    sub_dir: "permissions",
+}
+
+prebuilt_etc_xml {
+    name: "privapp_whitelist_com.blackduck.wizard.xml",
+    src: "proprietary/system_ext/etc/permissions/privapp_whitelist_com.blackduck.wizard.xml",
+    system_ext_specific: true,
+    sub_dir: "permissions",
+}

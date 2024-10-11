@@ -1,0 +1,37 @@
+BlackDuck vendor
+===========
+
+Project Include
+---------------
+
+## Cabinet
+
+This application is a lightweight and secure Android application that leverages WebView technology to provide a seamless user interface for managing personal accounts.
+
+## Updater App
+
+This application is designed as an applications store. Its main purpose is to install and update popular applications from an available list. 
+It also performs an important function in managing your Black Duck account for phones running on BlackDuck OS, ensuring the convenience and security of using a modern device.
+
+The application is built with a focus on security and utilizes advanced technologies to ensure a unique user experience with a user-friendly and modern interface.
+
+## System Updater (Privileged App)
+
+This application is a system-level privileged app that manages and executes over-the-air (OTA) updates for the Android operating system. 
+Designed to ensure seamless and secure updates, this app operates with elevated permissions, allowing it to directly interact with system partitions and update the OS without user intervention.
+
+## SecureDuck (Device Admin App)
+
+The Device Security Admin app is a comprehensive mobile security solution designed for devices running BlackDuckOS. 
+As a device administrator, it provides advanced security management, ensuring the protection of sensitive data and enforcing security policies across users.
+
+## WizardDuck (Privileged App)
+
+The WizardDuck is a privileged system application that guides users through the initial setup of their BlackDuck devices, ensuring a smooth and intuitive onboarding experience. As a core component of the device's out-of-box experience (OOBE), it provides critical configuration steps and customizations for both first-time users and after factory resets.
+
+# Contact
+For support or more detailed information about this project, please reach out to:
+
+Name: BlackDuck \
+Email: info@blackduck.biz \
+Org: blackduck.biz
